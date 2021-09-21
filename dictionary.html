@@ -5,27 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-<label><input type="text" id="input"></label>
-<label><input type="button" onclick="click()" value="clickme"></label>
-<br>
+<input type="text" id="eng">
+<input type="button" id="" onClick="dd()" value="Translate">
 <p id="result"></p>
 <script>
-    let english = ["hello", "bye", "cat", "dog"];
-    let vietnam = ["xin chào", "tạm biệt", "con mèo", "con chó"];
-    function click() {
-        let input = document.getElementById("input").value;
+    let e = ['one', 'two', 'three', 'four', 'six'];
+    let v = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu'];
+
+    function dd() {
+        let a = document.getElementById('eng').value
         let check = false
-        for (let i = 0; i < english.length; i++) {
-            if (input === english[i]) {
-                document.getElementById('result').innerHTML = vietnam[i]
+        for (let i = 0; i < e.length; i++) {
+            if (a === e[i]) {
+                document.getElementById('result').innerHTML = ' dich ra tieng viet la ' + v[i]
                 check = true
                 break
             }
         }
         if (check === false) {
-            document.getElementById('result').innerHTML = 'không tìm thấy'
+            document.getElementById('result').innerHTML = 'no result'
         }
     }
+
+
 </script>
+
 </body>
 </html>

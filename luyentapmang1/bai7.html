@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    while (arr.length < 10) {
+        let inp = prompt(('Nhập vào: '));
+        arr.push(inp);
+    }
+    let v = prompt("Nhập số nguyên V: ");
+    for (let i = 0; i < arr.length; i++) {
+        let index = -1;
+        if (v == arr[i]) {
+            index = i;
+        }
+        if (index != -1) {
+            for (let j = index; j < arr.length; j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr[arr.length - 1] = 0
+            i--;
+        }
+    }
+</script>
+</body>
+</html>

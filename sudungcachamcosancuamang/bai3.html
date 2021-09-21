@@ -6,11 +6,13 @@
 </head>
 <body>
 <script>
-    let str = 'c';
-    let result = []
+    let text = window.prompt();
+    let str = text.toString();
     let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let LOWER = 'abcdefghijklmnopqrstuvwxyz';
-    for(var x=0; x<str.length; x++)
+    let result = [str[0]];
+
+    for(let x=0; x<str.length; x++)
     {
         if(UPPER.indexOf(str[x]) !== -1)
         {
@@ -25,7 +27,8 @@
             result.push(str[x]);
         }
     }
-    console.log(result.join(''));
+    alert(result.join(''));
+</script>;
 </script>
 </body>
 </html>
