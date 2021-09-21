@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrs = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    let max = arrs[0]
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < arrs.length; i++) {
+        if (arrs[i] > max) {
+            max = arrs[i]
+        }
+        sum += arrs[i]
+        count++
+    }
+    document.write('phần tử có giá trị lớn nhất là ' + max)
+    document.write('<br>')
+    document.write('giá trị trung bình là :' + sum/count)
+</script>
+
+</body>
+</html>

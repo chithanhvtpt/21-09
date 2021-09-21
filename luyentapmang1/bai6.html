@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+    let num = +prompt('Nhập số num ')
+    let check = true
+    for (let i = 0; i < arr.length; i++) {
+        if (num === arr[i]) {
+            alert('V is in the array');
+            check = false
+            break
+        }
+    }
+        if (check === true) {
+            alert("V is not in the array")
+        }
+</script>
+</body>
+</html>
