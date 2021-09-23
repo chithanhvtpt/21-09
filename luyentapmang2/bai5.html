@@ -6,18 +6,27 @@
 </head>
 <body>
 <script>
-    let a = [];
-    let b = [];
-    let inp = prompt('Nhập a');
-    let inp2 = prompt('nhập b');
-    while (a.length && b.length < 2) {
-        a.push(inp)
-        b.push(inp2)
-    }
-    if (a === b) {
-        alert('giống nhau ')
+    let a = prompt('nhap chuoi thu nhat')
+    let b = prompt('nhap chuoi thu hai')
+    let check = false
+    document.write('chuoi thu nhat la ' + a + "<br>" + 'chuoi thu hai la ' + b + "<br>")
+    if (a.length !== b.length) {
+        document.write('Hai chuoi khong giong nhau')
     }else {
-        alert('khác nhau')
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < b.length; j++) {
+                if (a[i] === a[j]) {
+                    check = true
+                } else {
+                    check = false
+                }
+            }
+        }
+        if (check === false) {
+            document.write('hai chuoi khac nhau')
+        } else {
+            document.write('hai chuoi giong nhau ')
+        }
     }
 </script>
 </body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="fake()" style="text-align: center;">
+<form>
+  <label>
+    <textarea cols="30" rows="5" id="txt"></textarea>
+  </label>
+</form>
+<script>
+  let array = [];
+  let string = "";
+  array[1] = 'T';
+  array[2] = 'ô';
+  array[3] = 'i';
+  array[4] = ' ';
+  array[5] = 'B';
+  array[6] = 'ị';
+  array[7] = ' ';
+  array[8] = 'Đ';
+  array[9] = 'i';
+  array[10] = 'ê';
+  array[11] = 'n';
+  array[12] = '!';
+
+  function fake() {
+    let text = document.getElementById("txt").value;
+    let j = text.length;
+    if (j > 0) {
+      for (let i = 1; i <= j; i++) {
+        string += array[i];
+        if (i === 12) {
+          document.getElementById("txt").value = "";
+          string = "";
+        }
+      }
+    }
+    document.getElementById("txt").value = string;
+    string = "";
+    setTimeout("fake()", 10);
+  }
+</script>
+</body>
+</html>
